@@ -7,9 +7,13 @@
   "dependencies": {
     "@blueprintjs/core": "^4.6.1",
     "bootstrap": "^5.2.0",
+    "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.4.0",
+    "react-cookies": "^0.1.1",
     "react-dom": "^17.0.2",
+    "react-if": "^4.1.4",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.49.9",
     "uuid": "^8.3.2"

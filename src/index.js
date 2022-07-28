@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SettingsContext from './context/settings';
+import AuthProvider from './context/settings';
 import App from './app.js';
 
 class Main extends React.Component {
   render() {
-    return(
-      <SettingsContext>  
-      <App />
-      </SettingsContext>
+    return (
+      <AuthProvider>
+        <SettingsContext>
+          <App />
+        </SettingsContext>
+      </AuthProvider>
     )
-    
+
   }
 }
 
