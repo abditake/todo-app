@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import useForm from '../../hooks/form.js';
 import { SettingsContext } from '../../context/settings';
-import { Button } from "@blueprintjs/core";
+import { Button, Label } from "@blueprintjs/core";
 
 import { v4 as uuid } from 'uuid';
 
@@ -55,21 +55,21 @@ const ToDo = () => {
 
         <h2>Add To Do Item</h2>
 
-        <label>
+        <Label>
           <span>To Do Item</span>
           <input onChange={handleChange} name="text" type="text" placeholder="Item Details" />
-        </label>
+        </Label>
 
-        <label>
+        <Label>
           <span>Assigned To</span>
           <input onChange={handleChange} name="assignee" type="text" placeholder="Assignee Name" />
-        </label>
+        </Label>
 
-        <label>
+        <Label>
           <span>Difficulty</span>
           <input onChange={handleChange} defaultValue={defaultValues.difficulty} type="range" min={1} max={5} name="difficulty"
           />
-        </label>
+        </Label>
 
         <label>
           <Button type="submit">Add Item</Button>
