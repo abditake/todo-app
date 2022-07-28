@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import useForm from '../../hooks/form.js';
 import { SettingsContext } from '../../context/settings';
-import { FormGroup } from "@blueprintjs/core";
+import { Button } from "@blueprintjs/core";
 
 import { v4 as uuid } from 'uuid';
 
@@ -30,16 +30,13 @@ const ToDo = () => {
   }
 
   function toggleComplete(id) {
-
     const items = list.map(item => {
       if (item.id == id) {
         item.complete = !item.complete;
       }
       return item;
     });
-
     setList(items);
-
   }
 
   useEffect(() => {
@@ -71,12 +68,11 @@ const ToDo = () => {
         <label>
           <span>Difficulty</span>
           <input onChange={handleChange} defaultValue={defaultValues.difficulty} type="range" min={1} max={5} name="difficulty"
-
           />
         </label>
 
         <label>
-          <button type="submit">Add Item</button>
+          <Button type="submit">Add Item</Button>
         </label>
       </form>
 

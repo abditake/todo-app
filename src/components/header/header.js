@@ -1,16 +1,11 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './header.css'
+import { Navbar, Button }  from '@blueprintjs/core'
 
-export function TextLinkExample() {
+export function Header() {
   return (
-    <Navbar bg="light">
-        <Container>
-          <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-        </Container>
-      </Navbar>
+    <div>
+      
+    </div>
   );
 }
 
-export default TextLinkExample;
+export default Header;
