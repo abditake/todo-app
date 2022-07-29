@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 
 export const SettingsContext = React.createContext();
 
+const storage = JSON.parse(localStorage.getItem('todo'));
+
 export default function SettingsProvider({children}) {
-    
     //step 3: complete  
-    const [completed, setCompleted] = useState(false)
-    const [pageItems, setPageItems] = useState(4)
-    const [sort, setSort] = useState('')
+    const [completed, setCompleted] = useState(storage ? storage.completed : false)
+    const [pageItems, setPageItems] = useState(storage ? storage.pageItems : 3)
+    const [sort, setSort] = useState(storage ? storage.sort : 'difficulty')
     const [save, setSave] = useState('false');
 
     // adding today maybe

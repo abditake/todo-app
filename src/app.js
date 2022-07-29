@@ -16,7 +16,7 @@ const App = () =>{
   const { isLoggedIn, logout, user } = useContext(AuthContext);
 
 
-  
+
   return (
     <>
       <BrowserRouter>
@@ -36,7 +36,7 @@ const App = () =>{
 
           <Routes>
             <Route path="/" element={<ToDo />} />
-            <Route path="/settings" element={<SettingsForm />} />
+            {/* <Route path="/settings" element={<SettingsForm />} /> */}
           </Routes>
         </When>
       </BrowserRouter>
